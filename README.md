@@ -13,31 +13,31 @@
     <br />
     Built with pure C, Wayland, xkbcommon, and PAM.
     <br />
-    <a href="https://github.com/yourusername/ABlock"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Binary1Brains/ABlock"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     &middot;
-    <a href="https://github.com/yourusername/ABlock/issues">Report Bug</a>
+    <a href="https://github.com/Binary1Brains/ABlock/issues">Report Bug</a>
     &middot;
-    <a href="https://github.com/yourusername/ABlock/issues">Request Feature</a>
+    <a href="https://github.com/Binary1Brains/ABlock/issues">Request Feature</a>
   </p>
 </div>
 
 <p align="center">
-  <a href="https://github.com/yourusername/ABlock/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/yourusername/ABlock?style=flat" />
+  <a href="https://github.com/Binary1Brains/ABlock/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/Binary1Brains/ABlock?style=flat" />
   </a>
-  <a href="https://github.com/yourusername/ABlock/network/members">
-    <img src="https://img.shields.io/github/forks/yourusername/ABlock?style=flat" />
+  <a href="https://github.com/Binary1Brains/ABlock/network/members">
+    <img src="https://img.shields.io/github/forks/Binary1Brains/ABlock?style=flat" />
   </a>
-  <a href="https://github.com/yourusername/ABlock/stargazers">
-    <img src="https://img.shields.io/github/stars/yourusername/ABlock?style=flat" />
+  <a href="https://github.com/Binary1Brains/ABlock/stargazers">
+    <img src="https://img.shields.io/github/stars/Binary1Brains/ABlock?style=flat" />
   </a>
   <a href="https://github.com/yourusername/ABlock/issues">
-    <img src="https://img.shields.io/github/issues/yourusername/ABlock?style=flat" />
+    <img src="https://img.shields.io/github/issues/Binary1Brains/ABlock?style=flat" />
   </a>
-  <a href="https://github.com/yourusername/ABlock/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/yourusername/ABlock?style=flat" />
+  <a href="https://github.com/Binary1Brains/ABlock/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/Binary1Brains/ABlock?style=flat" />
   </a>
 </p>
 
@@ -126,6 +126,24 @@ ABlock uses the system PAM stack with the `login` service, respecting all PAM mo
 
 - A Wayland compositor that supports `ext-session-lock-v1` (see [Compositor Support](#compositor-support))
 - Development packages: `wayland-client`, `xkbcommon`, `libpam`, `libm`, `wayland-protocols`
+
+**Dependencies (System Packages)**
+On a typical Linux distribution:
+
+1. *Debian/Ubuntu:*
+  ```sh
+  sudo apt install libwayland-dev libxkbcommon-dev libpam0g-dev libc6-dev wayland-protocols
+  ```
+
+2. *Arch Linux:*
+  ```sh
+  sudo pacman -S wayland wayland-protocols libxkbcommon pam
+  ```
+
+3. *Fedora:*
+  ```sh
+  sudo dnf install wayland-devel libxkbcommon-devel pam-devel wayland-protocols-devel
+  ```
 
 ### Installation
 
