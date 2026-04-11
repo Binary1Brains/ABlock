@@ -86,6 +86,8 @@
 
 All drawing is done in software (no Cairo/Pango) to keep dependencies minimal and performance predictable.
 
+>Note: This is a project built on my spare time. I might not be able to actively maintain it. Might contain bugs. INSTALL AT YOUR OWN RISK
+
 ### Built With
 
 * [![C][C-badge]][C-url]
