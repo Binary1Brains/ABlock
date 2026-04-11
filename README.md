@@ -214,7 +214,7 @@ If the password is correct, the session unlocks. After 5 consecutive failures, t
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## License
-Distributed under the MIT License. See [LICENSE]() for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/Binary1Brains/ABlock/blob/main/LICENSE) for more information.
 
 ## Contact
 
@@ -223,7 +223,7 @@ Distributed under the MIT License. See [LICENSE]() for more information.
 | Parijat Dhar | [![LinkedIn][linkedin-badge]][parijat-url] |
 -------------------------------------------------------------
 
-Project Link: https://github.com/yourusername/ABlock
+Project Link: https://github.com/Binary1Brains/ABlock
 <p align="right">(<a href="#readme-top">back to top</a>)</p><!-- Badge definitions -->
 
 [C-badge]: https://img.shields.io/badge/C-00599C?style=flat&logo=c&logoColor=white
