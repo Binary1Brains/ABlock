@@ -22,6 +22,9 @@ ext-session-lock-v1-client-protocol.h: $(LOCK_XML)
 ext-session-lock-v1-client-protocol.c: $(LOCK_XML)
 	wayland-scanner private-code $(LOCK_XML) $@
 
+ABlock.o: ABlock.c ext-session-lock-v1-client-protocol.h
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c ABlock.c -o ABlock.o
+
 $(PROG): $(OBJS)
 	$(CC) $(LDFLAGS) -o $@ $(OBJS) $(LDLIBS)
 
