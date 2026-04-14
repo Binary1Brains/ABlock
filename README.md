@@ -235,6 +235,6 @@ Project Link: https://github.com/Binary1Brains/ABlock
 [xkbcommon-badge]: https://img.shields.io/badge/xkbcommon-4A4A4A?style=flat&logo=linux&logoColor=white
 [xkbcommon-url]: https://xkbcommon.org/
 [PAM-badge]: https://img.shields.io/badge/PAM-003B6F?style=flat&logo=linux&logoColor=white
-[PAM-url]: https://www.kernel.org/doc/html/latest/admin-guide/pam.html
+[PAM-url]: https://en.wikipedia.org/wiki/Privileged_access_management
 [linkedin-badge]: https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white
 [parijat-url]: https://www.linkedin.com/in/parijat-dhar-3b17a329a
