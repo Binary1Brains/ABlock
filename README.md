@@ -2,7 +2,7 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/yourusername/ABlock">
+  <a href="https://github.com/Binary1Brains/ABlock">
     <img src="assets/logo.png" alt="Logo" width="190" height="190">
   </a>
 
@@ -33,7 +33,7 @@
   <a href="https://github.com/Binary1Brains/ABlock/stargazers">
     <img src="https://img.shields.io/github/stars/Binary1Brains/ABlock?style=flat" />
   </a>
-  <a href="https://github.com/yourusername/ABlock/issues">
+  <a href="https://github.com/Binary1Brains/ABlock/issues">
     <img src="https://img.shields.io/github/issues/Binary1Brains/ABlock?style=flat" />
   </a>
   <a href="https://github.com/Binary1Brains/ABlock/blob/main/LICENSE">
@@ -152,7 +152,7 @@ On a typical Linux distribution:
 1. **Clone the repository**
 
    ```sh
-   git clone https://github.com/yourusername/ABlock.git
+   git clone https://github.com/Binary1Brains/ABlock.git
    cd ABlock
    ```
 
