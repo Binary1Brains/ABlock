@@ -92,16 +92,16 @@ typedef struct ABlock {
     bool unlocked;
 } ABlock;
 
-static const char *pam_password_ptr;
+// static const char *pam_password_ptr;
 
 static int pam_conv_fn(int num_msg, const struct pam_message **msg, struct pam_response **resp, void *data){
-    (void)data;
+    const char *password = (const char*)data;
     *resp = calloc(num_msg, sizeof(struct pam_response));
     if (!*resp) return PAM_BUF_ERR;
     for (int i = 0; i < num_msg; i++){
         (*resp)[i].resp = NULL;
         if (msg[i]->msg_style == PAM_PROMPT_ECHO_OFF || msg[i]->msg_style == PAM_PROMPT_ECHO_ON){
-            (*resp)[i].resp = strdup(pam_password_ptr ? pam_password_ptr : "");
+            (*resp)[i].resp = strdup(password ? password : "");
             if (!(*resp)[i].resp){
                 for (int j = 0; j < i; j++) free((*resp)[j].resp);
                 free(*resp);
@@ -113,8 +113,7 @@ static int pam_conv_fn(int num_msg, const struct pam_message **msg, struct pam_r
 }
 
 static bool verify_password(const char *pwd){
-    pam_password_ptr = pwd;
-    struct pam_conv conv = { pam_conv_fn, NULL };
+    struct pam_conv conv = { pam_conv_fn, (void*)pwd };
     pam_handle_t *pamh = NULL;
     const char *user = getenv("USER");
     if (!user){
@@ -371,10 +370,10 @@ static void kb_leave(void *d, struct wl_keyboard *kb, uint32_t serial, struct wl
 { (void)d;(void)kb;(void)serial;(void)surf; }
 
 static void kb_key(void *data, struct wl_keyboard *kb,
-                   uint32_t serial, uint32_t time,
+                   uint32_t serial, uint32_t time_ms,
                    uint32_t key, uint32_t state_val)
 {
-    (void)kb;(void)serial;(void)time;
+    (void)kb;(void)serial;(void)time_ms;
     ABlock *wl = data;
     if (state_val != WL_KEYBOARD_KEY_STATE_PRESSED) return;
     if (!wl->xkb_state) return;
@@ -394,7 +393,7 @@ static void kb_key(void *data, struct wl_keyboard *kb,
         else{
             wl->fail_count++;
             int delay = 1;
-            for (int i = 1; i < wl->fail_count; i++) delay *= 2; if (delay > MAX_LOCKOUT_SECS) delay = MAX_LOCKOUT_SECS;
+            for (int i = 1; i < wl->fail_count && delay <MAX_LOCKOUT_SECS; i++) delay *= 2;
             if (delay > MAX_LOCKOUT_SECS) delay = MAX_LOCKOUT_SECS;
             wl->lockout_until = time(NULL) + delay;
             wl->locked_out = true;
